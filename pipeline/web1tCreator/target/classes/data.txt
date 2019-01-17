@@ -1,4 +1,0 @@
-This is a test.
-It tests things a test sometimes tests.
-It is a test. 
-A test is great.

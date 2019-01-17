@@ -1,5 +1,5 @@
 package com;
-import de.unidue.langtech.web1.CreateIndexNews;
+
 import org.apache.uima.cas.CAS;
 import org.apache.uima.jcas.JCas;
 
@@ -18,8 +18,7 @@ public class DKProEndpoint {
 
         try {
 
-            CreateIndexNews analysis = new CreateIndexNews();
-            JCas result = analysis.run(textToAnalyze, "de");
+
             
             return JCasToString(result);
 
