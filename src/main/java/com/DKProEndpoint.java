@@ -1,9 +1,11 @@
 package com;
+// @DKPRO CLI import code generation is starting this line
+
 
 import org.apache.uima.cas.CAS;
 import org.apache.uima.jcas.JCas;
-
 import org.apache.uima.json.JsonCasSerializer;
+
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,7 +19,7 @@ public class DKProEndpoint {
     public static String analyzeText(@PathVariable(value = "text") String textToAnalyze) throws Exception {
 
         try {
-            // @DKPRO CLI code generation is starting this line
+            // @DKPRO CLI analysis code generation is starting this line
 
             
             return JCasToString(result);
