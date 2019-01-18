@@ -17,7 +17,7 @@ public class DKProEndpoint {
     public static String analyzeText(@PathVariable(value = "text") String textToAnalyze) throws Exception {
 
         try {
-
+            // @DKPRO CLI code generation is starting this line
 
             
             return JCasToString(result);
