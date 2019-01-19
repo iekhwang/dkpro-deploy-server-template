@@ -7,8 +7,10 @@
 	<artifactId>restapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-
-	<name>restapp</name>
+	
+	<!-- @DKPRO CLI container name generation is starting this line -->
+	
+	
 	<description>Base project for DKPRO Analaysis Web Automation</description>
 
 	<parent>
