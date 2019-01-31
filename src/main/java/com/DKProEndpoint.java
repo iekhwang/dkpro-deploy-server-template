@@ -2,6 +2,7 @@ package com;
 // @DKPRO CLI import code generation is starting this line
 
 
+
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.TypeSystem;
 import org.apache.uima.cas.impl.XmiCasSerializer;
@@ -9,6 +10,7 @@ import org.apache.uima.jcas.JCas;
 
 import org.apache.uima.util.XMLSerializer;
 import org.springframework.web.bind.annotation.*;
+import net.minidev.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 
@@ -17,11 +19,11 @@ public class DKProEndpoint {
 
     @RequestMapping(
             value = "/analysis", method = RequestMethod.POST, consumes = "text/plain")
-    public static String analyzeText(@RequestBody String jsonString) throws Exception {
+    public static String analyzeText(@RequestBody JSONObject jsonString) throws Exception {
 
         try {
             // @DKPRO CLI analysis code generation is starting this line
-
+            
 
             return JCasToXMIString(result);
 
