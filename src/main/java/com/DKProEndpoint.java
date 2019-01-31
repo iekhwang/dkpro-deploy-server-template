@@ -1,8 +1,6 @@
 package com;
 // @DKPRO CLI import code generation is starting this line
 
-import de.unidue.langtech.web1.CreateIndexNews;
-
 
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.TypeSystem;
@@ -10,25 +8,19 @@ import org.apache.uima.cas.impl.XmiCasSerializer;
 import org.apache.uima.jcas.JCas;
 
 import org.apache.uima.util.XMLSerializer;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.ByteArrayOutputStream;
-import java.io.StringWriter;
+
 @RestController
 public class DKProEndpoint {
 
     @RequestMapping(
-            value = "/process", method = RequestMethod.POST, consumes = "text/plain")
+            value = "/analysis", method = RequestMethod.POST, consumes = "text/plain")
     public static String analyzeText(@RequestBody String jsonString) throws Exception {
 
         try {
             // @DKPRO CLI analysis code generation is starting this line
-
-			CreateIndexNews analysis = new CreateIndexNews();
-			JCas result = analysis.run(jsonString);
 
 
             return JCasToXMIString(result);
@@ -72,6 +64,7 @@ public class DKProEndpoint {
 
             e.printStackTrace();
             return "JCas to String hat nicht funktioniert";
+
         } finally {
 
             if (outStream != null) {
