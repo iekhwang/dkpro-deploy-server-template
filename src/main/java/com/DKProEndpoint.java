@@ -21,6 +21,9 @@ public class DKProEndpoint {
     public static String analyzeText(@RequestBody String jsonString) throws Exception {
 
         try {
+            jsonString = jsonString
+                    .replace("\n", "");
+            
             // @DKPRO CLI analysis code generation is starting this line
             
 
