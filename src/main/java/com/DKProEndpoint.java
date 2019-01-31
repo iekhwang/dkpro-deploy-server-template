@@ -10,7 +10,6 @@ import org.apache.uima.jcas.JCas;
 
 import org.apache.uima.util.XMLSerializer;
 import org.springframework.web.bind.annotation.*;
-import net.minidev.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 
@@ -19,7 +18,7 @@ public class DKProEndpoint {
 
     @RequestMapping(
             value = "/analysis", method = RequestMethod.POST, consumes = "text/plain")
-    public static String analyzeText(@RequestBody JSONObject jsonString) throws Exception {
+    public static String analyzeText(@RequestBody String jsonString) throws Exception {
 
         try {
             // @DKPRO CLI analysis code generation is starting this line
