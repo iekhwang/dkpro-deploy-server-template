@@ -15,7 +15,8 @@ import java.io.ByteArrayOutputStream;
 
 @RestController
 public class DKProEndpoint {
-
+    // @DKPRO CLI init static analysis, starting this line
+        
     @RequestMapping(
             value = "/analysis", method = RequestMethod.POST, consumes = "text/plain")
     public static String analyzeText(@RequestBody String jsonString) throws Exception {
