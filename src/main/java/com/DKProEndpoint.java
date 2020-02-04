@@ -18,7 +18,7 @@ public class DKProEndpoint {
     // @DKPRO CLI init static analysis, starting this line
         
     @RequestMapping(
-            value = "/analysis", method = RequestMethod.POST, consumes = "text/plain")
+            value = "/analysis", method = RequestMethod.POST, consumes = "application/json")
     public static String analyzeText(@RequestBody String jsonString) throws Exception {
 
         try {
