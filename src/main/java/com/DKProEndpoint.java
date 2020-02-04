@@ -20,20 +20,11 @@ public class DKProEndpoint {
     @RequestMapping(
             value = "/analysis", method = RequestMethod.POST, consumes = "application/json")
     public static String analyzeText(@RequestBody String jsonString) throws Exception {
-
-        try {
             
             // @DKPRO CLI analysis code generation is starting this line
             
-            System.out.println("ni hao");
+
             return JCasToXMIString(result);
-
-
-        } catch (Exception e) {
-            System.out.println("bu hao");
-            e.printStackTrace();
-            return "Hat nicht funktionukkelt";
-        }
 
 
     }
