@@ -25,12 +25,12 @@ public class DKProEndpoint {
             
             // @DKPRO CLI analysis code generation is starting this line
             
-
+            System.out.println("ni hao");
             return JCasToXMIString(result);
 
 
         } catch (Exception e) {
-
+            System.out.println("bu hao");
             e.printStackTrace();
             return "Hat nicht funktionukkelt";
         }
